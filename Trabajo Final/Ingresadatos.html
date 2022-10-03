@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapas de la dieta</title>
+    <link rel="stylesheet" type="text/css" href="css/ingresadatos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Formulario de pedidos</title>
+</head>
+<body>
+    <main>
+      <div class="datos">
+      <h3 style="color: lime ;"><font face="Verdana">  Formulario de compra
+      </font>
+      </h3>
+              <form action="">
+          Nombre       : <input type="text" name="nombre"><br>
+          Apellido    : <input type="text" name="apellido"><br>
+          
+          <p> Indique Libro a Adquirir:</p>
+          <select name="libro" id="libro">
+            <option value="reinicio">Dieta Keto Reinicio del metabolismo</option>
+            <option value="sincarne">Keto Sin carnes ni làcteos</option>
+            <option value="ayuno">El poder del Keto ayuno</option>
+            <option value="30dias">Keto Diet 30 days plan</option>
+          </select><br>
+          <p> Indique forma de pago:</p>
+          <select name="pago" id="pago">
+            <option value="Transf">Transferencia a CBU</option>
+            <option value="debito">Tarjeta dèbito</option>
+            <option value="credito">Tarjeta crèdito</option>
+          </select><br>
+          <p>Reside a mas de 40Km de San Nicolás? si/no</p>
+          <input type="text" name="sn"><br>
+          <script> 
+            function preciofinal(envio)
+            var libro = 2750
+            var envio = 800
+            if (sn == "si") {
+              envio=800
+           } else {
+              envio=0
+           }
+           var conflete = libro + envio;
+           preciofinal(conflete)
+            document.write(`El valor de su compra es ${conflete}`)   
+            alert("Su precio final es: $" + conflete);  
+          </script> <br>
+      
+          <input type="submit" value="Enviar">
+          <input type="reset" name="Cancelar">
+        </form><br>
+      </div>
+    </main>
+    <a href="index.html">Inicio</a>
+</body>
+</html>
+
+
+  
+<!--
+let dato1, dato2, num1, num2
+dato1 = window,prompt("introduce un primer numero ")
+num1=parseInt(dato1)
+dato2 = prompt("introduce un segundo numero ")
+num2= parseInt(dato2)
+let resultado=num1+num2
+let resultadoResta
+document.write(`
+  la suma es ${resultado}`)
+  document.write(´la resta es )
+-->
